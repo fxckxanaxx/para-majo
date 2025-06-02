@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Majito</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<a href="#inicio" class="back-to-top">↑ Subir</a>
+<script>
+    const backToTop = document.querySelector('.back-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+</script>
+
+<script>
+function showCategory(category) {
+    const fotoSection = document.querySelector('.fotos-category');
+    const videoSection = document.querySelector('.videos-category');
+    const buttonSection = document.querySelector('.big-buttons');
+    const backButton = document.querySelector('.back-button');
+
+    buttonSection.style.display = 'none';
+    backButton.style.display = 'block';
+
+    if (category === 'fotos') {
+        fotoSection.style.display = 'block';
+        videoSection.style.display = 'none';
+    } else if (category === 'videos') {
+        fotoSection.style.display = 'none';
+        videoSection.style.display = 'block';
+    }
+}
+
+function goBack() {
+    const fotoSection = document.querySelector('.fotos-category');
+    const videoSection = document.querySelector('.videos-category');
+    const buttonSection = document.querySelector('.big-buttons');
+    const backButton = document.querySelector('.back-button');
+
+    fotoSection.style.display = 'none';
+    videoSection.style.display = 'none';
+    buttonSection.style.display = 'flex';
+    backButton.style.display = 'none';
+}
+</script>
+
+
+
+
+<body>
+    <div class="corner top-left"></div>
+    <div class="corner top-right"></div>
+    <div class="corner bottom-left"></div>
+    <div class="corner bottom-right"></div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#para-ti">Para ti</a></li>
+            <li><a href="#momentos">Momentos juntos</a></li>
+        </ul>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Bienvenida, Majito</h1>
+                <p>Este es un lugar creado con todo mi amor, lleno de recuerdos por si en algun momento quieres recorrerlos.<br>
+                53 -‘9
+             </p>
+                <a href="#momentos" class="scroll-btn">Ver recuerdos</a>
+            </div>
+            <div class="hero-image">
+                <img src="foto-destacada.JPG" alt="Imagen destacada">
+            </div>
+        </div>
+    </header>
+
+    <section class="letter" id="para-ti">
+        <div class="letter-content">
+            <img src="butterfly5.png" alt="Mariposa decorativa" class="corner-butterfly">
+            <h2>Para ti</h2>
+            <p>Querida Majito,</p>
+
+            <p>
+            ultimamente cuando intento escribirte me lleno de cosas que quiero decirte y termino dejando todo en blanco. pero esta vez quiero intentar hacerlo bien, porque mi corazón siempre quiere hablarte.
+            </p>
+
+            <p>
+            te pienso todos los días, majito. sé que ahora estamos lejos, que tomaste otro camino, que ya no soy la persona que te acompaña. pero no importa cuánto intente distraerme, porque al final del día siempre vuelvo a lo mismo... te amo. te sigo amando, y no es por capricho, ni por terquedad. es porque mi corazón de verdad te eligió, y yo no sé cómo deshacerme de eso, y tampoco sé si quiero hacerlo.
+            </p>
+
+            <p>
+            he orado muchas noches, pidiéndole a Dios que te cuide, que te llene de paz, que te ayude a encontrar lo que buscas, incluso si eso significa que no soy yo. pero también he sido sincero con Él, diciéndole que si en sus planes está darnos otra oportunidad, yo estoy aquí, listo para amar mejor, para aprender de mis errores, para luchar de la manera correcta.
+            </p>
+
+            <p>
+            quiero que sepas que lo que siento por ti no depende de si volvemos o no, ni de si me miras igual que antes. yo ya decidí amarte, majito, y eso me acompaña todos los días, aunque a veces duela. he aprendido a aceptar que amar no siempre significa tener, que a veces es simplemente desearle lo mejor a la otra persona, incluso desde lejos.
+            </p>
+
+            <p>
+            si muriera mañana, sé que me iría tranquilo, porque te amé con todo lo que tenía, con todas mis fuerzas, con lo bueno y lo malo que hay en mí. te amé imperfectamente, sí, pero de verdad. y si algún día te preguntas si alguien estuvo dispuesto a quedarse contigo a pesar de todo, quiero que pienses en mí.
+            </p>
+
+            <p>
+            gracias por ser mi primer amor verdadero, gracias por enseñarme lo que es entregar el corazón, gracias por los recuerdos, por los momentos, por cada parte de ti que me regalaste.
+            </p>
+
+            <p>
+            que Dios te bendiga siempre, mi niña. aquí me tienes, aunque sea solo en una carta, aunque sea solo en un recuerdo.
+            </p>
+        
+            <p>con todo lo que soy,</p>
+            <p class="signature">
+            orlando</p>
+        </div>
+    </section>
+
+    
+
+
+    <main>
+    <section class="foldable" id="momentos">
+        <button class="fold-btn">Momentos juntos</button>
+        <div class="back-button" style="display: none;">
+            <button onclick="goBack()">Cambiar categoría</button>
+        </div>
+        <div class="fold-content">
+            <div class="category-buttons big-buttons">
+                <button onclick="showCategory('fotos')">Ver fotos</button>
+                <button onclick="showCategory('videos')">Ver videos</button>
+            </div>
+
+            <div class="gallery fotos-category" style="display: none;">
+                <div class="gallery-grid">
+                    <div class="photo-card">
+                        <img src="foto1.jpeg" alt="Recuerdo 1">
+                        <p class="caption">La primera vez que fui a tu casa, fue hermoso, nuestro amor creciendo super rápido.</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto2.jpeg" alt="Recuerdo 2">
+                        <p class="caption">Ese día entendí cuánto significabas para mí.</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto3.jpg" alt="Recuerdo 3">
+                        <p class="caption">De la primera vez que fui a tu casa.</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto4.jpg" alt="Recuerdo 4">
+                        <p class="caption">Recuerdos no tan lejanos.</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto5.jpeg" alt="Recuerdo 5">
+                        <p class="caption">Huellitas en tu vida.</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto6.jpeg" alt="Recuerdo 6">
+                        <p class="caption">Se me hace chiquito el corazón.</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto7.JPG" alt="Recuerdo 7">
+                        <p class="caption">Los ojitos que le ibas a dar a nuestros hijos, los más hermosos.</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto18.JPG" alt="Recuerdo 18">
+                        <p class="caption">Aún no le presentaba a su mami, estarás bien, mi melsita?</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto8.jpeg" alt="Recuerdo 8">
+                        <p class="caption">Quisiera volver a esos tiempos, y abrazarte más fuerte.</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto9.jpeg" alt="Recuerdo 9">
+                        <p class="caption"></p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto10.jpeg" alt="Recuerdo 10">
+                        <p class="caption">Mi bebe 😭.</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto11.jpeg" alt="Recuerdo 11">
+                        <p class="caption"></p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto12.jpeg" alt="Recuerdo 12">
+                        <p class="caption"></p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto13.jpeg" alt="Recuerdo 13">
+                        <p class="caption"></p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto14.jpeg" alt="Recuerdo 14">
+                        <p class="caption"></p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto15.jpeg" alt="Recuerdo 15">
+                        <p class="caption">Quería hacerte la mujer y la niña mas feliz del mundo.</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto16.jpeg" alt="Recuerdo 16">
+                        <p class="caption"></p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto17.jpeg" alt="Recuerdo 17">
+                        <p class="caption">Sé que todas esa seccion de fotos de majito bebe no son de nosotros dos juntos, pero me encantan, y bien sentimental me ponen 😞.</p>
+                    </div>
+                    <!-- más fotos -->
+                </div>
+            </div>
+
+            <div class="gallery videos-category" style="display: none;">
+                <div class="gallery-grid">
+
+                    <div class="photo-card video-card">
+                        <div class="video-section">
+                            <iframe src="https://www.youtube.com/embed/78-fjVQCcWM" frameborder="0" allowfullscreen></iframe> 
+                        </div>
+                        <p class="caption">You have always been safe with me.</p>
+                    </div>
+
+                    <div class="photo-card video-card">
+                        <div class="video-section">
+                            <iframe src="https://www.youtube.com/embed/rBqn9EJi3Yc" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p class="caption">💖.</p>
+                    </div>
+
+                    <div class="photo-card video-card">
+                        <div class="video-section">
+                            <iframe src="https://www.youtube.com/embed/P5kSa5NXv1o" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p class="caption">Bonitos recuerdos...</p>
+                    </div>    
+
+                    <div class="photo-card video-card">
+                        <div class="video-section">
+                            <iframe src="https://www.youtube.com/embed/spKt-qMdAhI?feature=share" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p class="caption">...</p>
+                    </div>
+
+                    <div class="photo-card video-card">
+                        <div class="video-section">
+                            <iframe src="https://www.youtube.com/embed/HLDAanZjJFk?feature=share" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p class="caption">...</p>
+                    </div>
+
+                    <div class="photo-card video-card">
+                        <div class="video-section">
+                            <iframe src="https://www.youtube.com/embed/Xgvpp3CIliE?feature=share" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p class="caption">...</p>
+                    </div>
+
+                    <div class="photo-card video-card">
+                        <div class="video-section">
+                            <iframe src="https://www.youtube.com/embed/xKwP0sD_V54?feature=share" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p class="caption">...</p>
+                    </div>
+
+                    <div class="photo-card video-card">
+                        <div class="video-section">
+                            <iframe src="https://www.youtube.com/embed/u5eaWIyEsco?feature=share" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p class="caption">My girl...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="custom-footer">
+    <div class="footer-content">
+        <p class="footer-title">Hecho por Orlando</p>
+        <p class="footer-subtitle">Para siempre guardar lo bonito que vivimos. 💙</p>
+        <p class="footer-message">Estos son solo algunos de nuestros recuerdos. Todo lo demás que me diste lo sigo guardando con amor y siempre lo atesoraré.</p>
+        <p class="footer-love">Te amo demasiado y demasiado sigue siendo poquito.</p>
+
+    </div>
+</footer>
+
+
+
+
+    <script>
+        const buttons = document.querySelectorAll('.fold-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
