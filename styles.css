@@ -811,7 +811,7 @@ button:hover, .scroll-btn:hover, .back-button button:hover {
 .note-form textarea {
   resize: vertical;
   padding: 10px;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
   border-radius: 12px;
   border: 1px solid var(--accent-color);
