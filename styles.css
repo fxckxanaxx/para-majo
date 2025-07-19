@@ -75,7 +75,6 @@ main {
     color: #555;
 }
 
-
 .corner {
     position: fixed;
     width: 80px; 
@@ -828,7 +827,7 @@ button:hover, .scroll-btn:hover, .back-button button:hover {
     gap: 15px;
     max-height: 400px;     
     overflow-y: auto;
-    scrollbar-width: thin;  
+    scrollbar-width: thin; 
 }
 
 
@@ -904,7 +903,7 @@ button:hover, .scroll-btn:hover, .back-button button:hover {
 .note-item .note-label,
 .note-item .note-text {
     font-family: 'Roboto', sans-serif !important;
-    font-size: 0.95em;           
+    font-size: 0.95em;            
 }
 
 
