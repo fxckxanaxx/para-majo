@@ -809,13 +809,14 @@ button:hover, .scroll-btn:hover, .back-button button:hover {
 }
 
 .note-form textarea {
-  resize: vertical;
-  padding: 10px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.3em;
-  border-radius: 12px;
-  border: 1px solid var(--accent-color);
-  background: rgba(255, 255, 255, 0.8);
+    resize: vertical;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid var(--accent-color);
+    background: rgba(255, 255, 255, 0.8);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.4;
 }
 
 .notes-list {
