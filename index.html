@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <a href="#inicio" class="back-to-top">↑ Subir</a>
@@ -55,6 +56,63 @@ function goBack() {
 }
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+
+  const notesKey  = 'majito-notes';                       
+  const noteInput = document.getElementById('note-input');
+  const addBtn    = document.getElementById('add-note-btn');
+  const notesList = document.getElementById('notes-list');
+
+  let notes = JSON.parse(localStorage.getItem(notesKey)) || [];
+  renderNotes();
+
+  addBtn.addEventListener('click', () => {
+    const text = noteInput.value.trim();
+    if (!text) return;                                     
+
+    notes.push(text);                                       
+    localStorage.setItem(notesKey, JSON.stringify(notes));  
+    noteInput.value = '';                                   
+    renderNotes();                                          
+  });
+
+  function renderNotes() {
+  notesList.innerHTML = '';
+
+  notes.forEach((note, idx) => {
+    const li = document.createElement('li');
+    li.className = 'note-item';
+
+    const label = document.createElement('span');
+    label.className = 'note-label';
+    label.textContent = `Notita ${idx + 1}:`;
+
+    const body = document.createElement('span');
+    body.className = 'note-text';
+    body.textContent = ` ${note}`;    
+    const del = document.createElement('button');
+    del.className = 'del-btn';
+    del.textContent = '✖';
+    del.title = 'Eliminar notita';
+    del.addEventListener('click', () => {
+      notes.splice(idx, 1);
+      localStorage.setItem(notesKey, JSON.stringify(notes));
+      renderNotes();
+    });
+
+    li.append(label, body, del);
+    notesList.appendChild(li);
+  });
+}
+
+
+});
+</script>
+
+
+
 
 
 
@@ -69,6 +127,7 @@ function goBack() {
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#para-ti">Para ti</a></li>
             <li><a href="#momentos">Momentos juntos</a></li>
+            <li><a href="#notas">Notas</a></li>
         </ul>
     </nav>
 
@@ -216,7 +275,6 @@ function goBack() {
                         <img src="foto17.jpeg" alt="Recuerdo 17">
                         <p class="caption">Sé que todas esa seccion de fotos de majito bebe no son de nosotros dos juntos, pero me encantan, y bien sentimental me ponen 😞.</p>
                     </div>
-                    <!-- más fotos -->
                 </div>
             </div>
 
@@ -282,6 +340,20 @@ function goBack() {
             </div>
         </div>
     </section>
+
+<section id="notas" class="notes-section foldable">
+  <button class="fold-btn">Mis notitas, un dia a dia de como voy llevando todo...</button>
+
+  <div class="fold-content">
+    <div class="note-form">
+      <textarea id="note-input" rows="3" placeholder=""></textarea>
+      <button id="add-note-btn">Agregar nota</button>
+    </div>
+
+    <ul id="notes-list" class="notes-list"></ul>
+  </div>
+</section>
+
 
 
 
