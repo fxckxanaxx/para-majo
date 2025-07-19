@@ -75,14 +75,14 @@ main {
     color: #555;
 }
 
-/* Mariposas decorativas */
+
 .corner {
     position: fixed;
-    width: 80px;  /* antes 60px */
+    width: 80px; 
     height: 80px;
     background-size: contain;
     background-repeat: no-repeat;
-    opacity: 0.9;  /* más visible */
+    opacity: 0.9;  
     animation: flutter 4s ease-in-out infinite alternate;
     pointer-events: none;
     z-index: 2000;
@@ -797,10 +797,9 @@ button:hover, .scroll-btn:hover, .back-button button:hover {
     }
 }
 
-/* Sección de notas */
 .notes-section .fold-content {
-  display: block;          /* Queremos que aparezca desplegada por defecto,
-                              cámbialo si prefieres que se oculte */
+  display: block;         
+                              
 }
 
 .note-form {
@@ -829,7 +828,7 @@ button:hover, .scroll-btn:hover, .back-button button:hover {
     gap: 15px;
     max-height: 400px;     
     overflow-y: auto;
-    scrollbar-width: thin;  /* Firefox */
+    scrollbar-width: thin;  
 }
 
 
@@ -877,7 +876,6 @@ button:hover, .scroll-btn:hover, .back-button button:hover {
     transform: scale(1.05);
 }
 
-/* Bloque de cada nota */
 .note-item {
     background: rgba(255, 255, 255, 0.9);
     border-left: 6px solid var(--accent-color);
@@ -906,7 +904,7 @@ button:hover, .scroll-btn:hover, .back-button button:hover {
 .note-item .note-label,
 .note-item .note-text {
     font-family: 'Roboto', sans-serif !important;
-    font-size: 0.95em;             /* un poco más pequeño */
+    font-size: 0.95em;           
 }
 
 
