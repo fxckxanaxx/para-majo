@@ -907,6 +907,13 @@ button:hover, .scroll-btn:hover, .back-button button:hover {
     font-size: 0.95em;            
 }
 
+.del-btn,
+.note-item .del-btn,
+.note-item button {
+    display: none !important;
+}
+
+
 
 
 
