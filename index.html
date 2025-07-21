@@ -345,12 +345,40 @@ document.addEventListener('DOMContentLoaded', () => {
   <button class="fold-btn">Mis notitas, un dia a dia de como voy llevando todo...</button>
 
   <div class="fold-content">
-    <div class="note-form">
-      <textarea id="note-input" rows="3" placeholder=""></textarea>
-      <button id="add-note-btn">Agregar nota</button>
-    </div>
 
-    <ul id="notes-list" class="notes-list"></ul>
+    <ul id="notes-list" class="notes-list">
+        <li class="note-item">
+        <span class="note-label">Notita 1:</span>
+        <span class="note-text">hoy me puse triste porque me di cuenta que no voy a encontrarte en ninguna otra persona, y eso no me ayuda a avanzar, no quiero conocer a ninguna otra persona, ni hablar con nadie mas. en mi locura, imagino como seria un futuro con alguna otra mujer, y de verdad no me veo... solo quería que fueras tu, mi niña, tus ojitos, tu forma de ser, tu linda carita, te quería a ti, como mi esposa y madre de mis hijos... no sé como avanzar, no sé como dejar de buscarte en otras chicas, no te voy a conseguir.</span>
+    </li>
+
+    <li class="note-item">
+        <span class="note-label">Notita 2:</span>
+        <span class="note-text">te extraño…</span>
+    </li>
+
+    <li class="note-item">
+        <span class="note-label">Notita 3:</span>
+        <span class="note-text">llegue de la iglesia, te sigo extrañando. extraño todo de ti, extraño a mi niña.</span>
+    </li>
+
+    <li class="note-item">
+        <span class="note-label">Notita 4:</span>
+        <span class="note-text">pelee con mi mama, siento mucha impotencia, quiero volver a mi casa, a ti, mi niña. te extraño </span>
+    </li>
+
+    <li class="note-item">
+        <span class="note-label">Notita 5:</span>
+        <span class="note-text">hoy te lloré como no tienes idea.</span>
+    </li>
+
+    <li class="note-item">
+        <span class="note-label">Notita 6:</span>
+        <span class="note-text">no olvides que tu relacion con el inició al poco tiempo de una ruptura con alguien que te amaba de verdad, con quien viviste cosas hermosas y no te importo nada del proceso que pasaron juntos ni de todos los momentos que compartieron, no dudaste ni un momento en humillarlo y partirle el corazón. todo fue tu decisión, Dios NO te envió a hacer eso.</span>
+    </li>
+    
+        
+    </ul>
   </div>
 </section>
 
@@ -368,16 +396,5 @@ document.addEventListener('DOMContentLoaded', () => {
 </footer>
 
 
-
-
-    <script>
-        const buttons = document.querySelectorAll('.fold-btn');
-        buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const content = btn.nextElementSibling;
-                content.style.display = (content.style.display === 'block') ? 'none' : 'block';
-            });
-        });
-    </script>
 </body>
 </html>
