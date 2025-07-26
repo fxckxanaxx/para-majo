@@ -66,6 +66,7 @@ function goBack() {
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#para-ti">Para ti</a></li>
             <li><a href="#momentos">Momentos juntos</a></li>
+            <li><a href="#como-voy">Cómo voy llevando todo</a></li>
             <li><a href="#notas">Notas</a></li>
         </ul>
     </nav>
@@ -279,6 +280,28 @@ function goBack() {
             </div>
         </div>
     </section>
+<section class="foldable" id="como-voy">
+    <button class="fold-btn">Cómo voy llevando todo</button>
+    <div class="category-buttons big-buttons">
+        <button id="toggle-content-btn" onclick="toggleContent()">Ver Videos / Fotos</button>
+    </div>
+    
+    <div class="gallery content-gallery" id="content-gallery" style="display: none;">
+        <div class="gallery-grid">
+            <div class="photo-card video-card">
+                <div class="video-section">
+                    <iframe src="https://www.youtube.com/embed/-3M4qWh8kqM" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="caption">Te amo siempre</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="foto10.jpeg" alt="Tu foto">
+                <p class="caption">Tu descripción aquí</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section id="notas" class="notes-section foldable">
   <button class="fold-btn">Mis notitas, un dia a dia de como voy llevando todo...</button>
@@ -407,7 +430,20 @@ function goBack() {
 
     </div>
 </footer>
-
+        
+<script>
+function toggleContent() {
+    const gallery = document.getElementById('content-gallery');
+    const button = document.getElementById('toggle-content-btn');
+    
+    if (gallery.style.display === 'none') {
+        gallery.style.display = 'block';
+        button.textContent = 'Ocultar Videos / Fotos';
+    } else {
+        gallery.style.display = 'none';
+        button.textContent = 'Ver Videos / Fotos';
+    }
+}
 
 </body>
 </html>
